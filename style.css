@@ -1,0 +1,106 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Body */
+body{
+    background: #f8fafc;
+}
+
+/* Navbar */
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo Section */
+.logo-section{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #0ea5e9;
+}
+
+.title{
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+    text-transform: capitalize;
+}
+
+/* Nav Links */
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links li a{
+    text-decoration: none;
+    color: #334155;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+/* Hover Underline */
+.nav-links li a::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #0ea5e9;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after{
+    width: 100%;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active{
+    color: #0ea5e9;
+}
+
+/* Button */
+.btn-primary{
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #0ea5e9, #2563eb);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(37,99,235,0.3);
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37,99,235,0.4);
+}
+
